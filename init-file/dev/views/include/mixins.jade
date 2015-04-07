@@ -1,0 +1,59 @@
+//- 引用图片
+mixin img(src)
+	- src = /\.(jpg|png|gif)$/i.test(src) ? src : src + '.png';
+	- src = /\//.test(src) ? src : '../image/' + src;
+	img(src=src)&attributes(attributes)
+
+//- 循环某块
+mixin iterator(n, j)
+	if block
+		- var i = 0
+		while i++ < n
+			if j >= 0 && i === j + 1
+				li&attributes(attributes)
+			else
+				block
+
+mixin list-a(items, index, nam)
+	each item,i in items
+		if index >= 0 && i === index
+			- nam = nam ? nam : 'active'
+			a(href="#" class=nam)= item
+		else
+			a(href="#")= item
+
+mixin list-li-a(items)
+	each item in items
+		li
+			a(href="#")= item
+
+mixin ul(items, index, nam)
+	ul&attributes(attributes)
+		each item,i in items
+			if index >= 0 && i === index
+				- nam = nam ? nam : 'active'
+				li(class=nam)!= item
+			else
+				li!= item
+
+mixin ul-a(items, index, nam)
+	ul&attributes(attributes)
+		each item,i in items
+			if index >= 0 && i === index
+				- nam = nam ? nam : 'active'
+				li(class=nam): a(href="#")= item
+			else
+				li: a(href="#")= item
+
+mixin col-a(items, col)
+	- col = col ? col : 4
+	.row&attributes(attributes)
+		each item in items
+			div(class="col-#{col}"): a(href="#")= item
+
+mixin style(items)
+	each item in items
+		link(rel="stylesheet" href="../css/#{item}.min.css")
+mixin script(items)
+	each item in items
+		script(src="../scripts/#{item}.js")

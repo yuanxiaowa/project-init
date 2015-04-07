@@ -1,0 +1,13 @@
+doctype html
+html(lang="zh-CN")
+	include ../include/mixins
+	head
+		include ../include/head
+	body
+		block contents
+		// build:js ../scripts/index.js
+		// bower:js
+		// endbower
+		block scripts
+		// endbuild
+		| 

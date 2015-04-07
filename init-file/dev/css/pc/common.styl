@@ -1,0 +1,86 @@
+@import reset
+@import mixin
+
+// 灰色
+$c3 	= #3
+$c3c	= #3c
+$c6		= #6
+$c9		= #9
+$cf4	= #f4
+$cf6	= #f6
+$cf7	= #f7
+$cf8	= #f8
+$cd		= #d
+
+$white	= #f
+
+$black	= #0
+
+$s1		= 1px
+$s2		= $s1 * 2
+$s3		= $s1 * 3
+$s4		= $s1 * 4
+$s5 	= $s1 * 5
+$s6 	= $s1 * 6
+$s7 	= $s1 * 7
+$s8 	= $s1 * 8
+$s10 	= $s1 * 10
+$s12	= $s1 * 12
+$s14	= $s1 * 14
+$s16	= $s1 * 16
+$s18	= $s1 * 18
+$s19	= $s1 * 19
+$s20 	= $s1 * 20
+$s24	= $s1 * 24
+$s28 	= $s1 * 28
+$s30 	= $s1 * 30
+$s36	= $s1 * 36
+$s38 	= $s1 * 38
+$s40	= $s1 * 40
+$s50	= $s1 * 50
+$s80 	= $s1 * 80
+$s100 	= $s1 * 100
+$s1000 	= $s1 * 1000
+
+$radius = $s1 * 3
+
+.container
+	margin-left auto
+	margin-right auto
+	
+body
+	font-size $s12
+	color $c6
+	
+a
+	text-decoration none
+	color $c6
+
+input
+	vertical-align middle
+
+.pos-rel
+	position relative
+
+.row
+	&:after
+		clear left
+		content ''
+		display block
+	for i in 1..12
+		.col-{i}
+			float left
+			width (100% / 12 * i)
+
+.btn
+	display inline-block
+	border none
+	text-align center
+	transition .3s
+		
+.icon
+	display inline-block
+
+.img-block
+	width 100%
+	display block

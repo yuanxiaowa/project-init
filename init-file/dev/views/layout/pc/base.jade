@@ -1,0 +1,15 @@
+doctype html
+<!--[if lte IE 7]><html class="ie" lang="zh-CN"><![endif]-->
+<!--[if (gt IE 7)|(!IE)]><!--><html lang="zh-CN"><!--<![endif]-->
+include ../include/mixins
+head
+	include ../include/head
+body
+	block contents
+	// build:js ../scripts/index.js
+	// bower:js
+	// endbower
+	block scripts
+	// endbuild
+	| 
+</html>

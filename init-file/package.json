@@ -1,0 +1,15 @@
+{
+  "name": "#{name}",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": #{dependencies},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "weiwend project"
+  ],
+  "author": "weiwend",
+  "license": "ISC"
+}

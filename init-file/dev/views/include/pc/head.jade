@@ -1,0 +1,27 @@
+meta(charset="utf-8")
+meta(http-equiv="X-UA-Compatible",content="IE=edge")
+meta(name="viewport",content="width=device-width, initial-scale=1")
+//- 禁用缓存
+	meta(http-equiv="pragma",content="no-cache")
+	meta(http-equiv="Cache-Control",content="no-cache,must-revalidate")
+	meta(http-equiv="expires",content="Wed,26 Feb 1997 08:21:57 GMT")
+block title
+	title 首页
+// build:css ../css/index.css
+block style
+// endbuild
+| 
+<!--[if lt IE 9]>
+script.
+	(function() {
+		if (! 
+		/*@cc_on!@*/
+		0) return;
+		var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video, address".split(', ');
+		var i= e.length;
+		while (i--){
+		 document.createElement(e[i])
+		} 
+	})();
+| 
+<![endif]-->

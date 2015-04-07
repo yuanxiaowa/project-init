@@ -1,0 +1,21 @@
+// 垂直居中
+vm(h)
+	height h
+	line-height @height
+
+// 微软雅黑
+yahei()
+	font-family 'Microsoft Yahei'
+
+// 方块
+square(w)
+	width w
+	height @width
+
+// 省略号
+ellipsis()
+	width arguments
+	overflow hidden
+	text-overflow ellipsis
+	white-space nowrap
+	display inline-block
